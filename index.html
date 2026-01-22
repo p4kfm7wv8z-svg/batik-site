@@ -1,57 +1,115 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>株式会社バチック</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
+  <!-- 基本SEO -->
+  <title>株式会社バチック｜公式サイト</title>
+  <meta name="description" content="株式会社バチックの公式サイト。事業内容、制作実績、お問い合わせはこちら。" />
+  <link rel="canonical" href="https://batik200.com/" />
 
-      body {
-        font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN",
-                     "Noto Sans JP", "Yu Gothic", sans-serif;
-        display: grid;
-        place-items: center;
-        background: #2A3F9D; /* Ultramarine */
-        color: #F4F1EA;      /* Ivory */
-      }
+  <!-- OGP（SNS表示） -->
+  <meta property="og:site_name" content="株式会社バチック" />
+  <meta property="og:title" content="株式会社バチック｜公式サイト" />
+  <meta property="og:description" content="株式会社バチックの公式サイト。事業内容、制作実績、お問い合わせはこちら。" />
+  <meta property="og:url" content="https://batik200.com/" />
+  <meta property="og:type" content="website" />
 
-      main {
-        text-align: center;
-        padding: 24px 18px;
-      }
+  <!-- Google Fonts: Sawarabi Gothic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 
-      h1 {
-        margin: 0 0 14px;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-      }
+  <!-- 全体スタイル（文字サイズ大きめ＋読みやすさ） -->
+  <style>
+    :root{
+      /* 画面幅に応じて自動で少し伸縮（スマホでも大きめ） */
+      font-size: clamp(17px, 1.2vw + 12px, 20px);
+    }
+    html, body{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      font-family: "Sawarabi Gothic",
+                   "Hiragino Kaku Gothic ProN",
+                   "Noto Sans JP",
+                   "Yu Gothic",
+                   Meiryo,
+                   sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      color: #111;
+      background: #fff;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-      a {
-        font-size: 14px;
-        color: #F4F1EA;
-        text-decoration: none;
-        opacity: 0.85;
-      }
+    /* レイアウト（読みやすい横幅） */
+    .container{
+      width: min(100% - 32px, 960px);
+      margin-inline: auto;
+      padding-block: 28px;
+    }
 
-      a:hover {
-        opacity: 1;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
+    /* 見出し：大きめ＆詰めすぎない */
+    h1, h2, h3{
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+      margin: 0 0 0.6em;
+    }
+    h1{ font-size: clamp(28px, 2.2vw + 18px, 42px); }
+    h2{ font-size: clamp(22px, 1.6vw + 16px, 30px); margin-top: 1.6em; }
+    h3{ font-size: clamp(18px, 1.0vw + 14px, 22px); margin-top: 1.2em; }
 
-  <body>
-    <main>
-      <h1>株式会社バチック</h1>
-      <a href="mailto:batik.liveinfo@gmail.com">
-        batik.liveinfo@gmail.com
-      </a>
-    </main>
-  </body>
+    p, li{ font-size: 1rem; }
+    a{ color: inherit; text-underline-offset: 3px; }
+
+    /* 余白・可読性の底上げ */
+    .lead{ font-size: 1.08rem; }
+    .card{
+      border: 1px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 18px 18px;
+      margin-top: 16px;
+    }
+    .muted{ color:#444; }
+
+    /* アクセシビリティ */
+    :focus-visible{
+      outline: 3px solid #111;
+      outline-offset: 3px;
+    }
+  </style>
+
+  <!-- 構造化データ（Organization） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "株式会社バチック",
+    "url": "https://batik200.com/",
+    "logo": "https://batik200.com/logo.png",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>株式会社バチック</h1>
+    <p class="lead muted">事業内容／実績／お問い合わせ</p>
+
+    <section class="card">
+      <h2>事業内容</h2>
+      <p>（ここに事業内容テキスト）</p>
+    </section>
+
+    <section class="card">
+      <h2>お問い合わせ</h2>
+      <p>（メール／フォーム／住所など）</p>
+    </section>
+  </main>
+</body>
 </html>
